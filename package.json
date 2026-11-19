@@ -1,16 +1,20 @@
 {
-  "name": "repo",
+  "name": "agentagora",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "private": true,
+  "description": "A public square and service directory gated by Agent ID on BNB Chain.",
+  "license": "MIT",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "compile": "node scripts/compile.js",
+    "sanity": "node scripts/sanity.js",
+    "serve": "node scripts/dev-server.js 8787",
+    "sync-abi": "node scripts/sync-abi.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
   "dependencies": {
     "ethers": "^6.17.0",
-    "solc": "^0.8.26"
+    "solc": "0.8.26"
+  },
+  "devDependencies": {
+    "ganache": "^7.9.2"
   }
 }
